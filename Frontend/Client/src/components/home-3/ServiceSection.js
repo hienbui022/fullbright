@@ -147,7 +147,8 @@ const ServiceSection = () => {
                 const response = await CourseService.getAllCourses({ 
                     page: 1, 
                     limit: 8,
-                    search: ''
+                    search: '',
+                    published: "true"
                 });
                 setCourses(response.data.courses);
             } catch (error) {

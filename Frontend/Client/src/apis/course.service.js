@@ -2,13 +2,14 @@ import api from './api';
 
 const CourseService = {
   getAllCourses: async (params = {}) => {
-    const { page = 1, limit = 10, search = '' } = params;
+    const { page = 1, limit = 10, search = '', published  } = params;
     try {
       const response = await api.get('/courses', {
         params: {
           page,
           limit,
-          search
+          search,
+          published
         }
       });
       return response.data;

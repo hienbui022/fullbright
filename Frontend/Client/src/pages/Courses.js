@@ -38,7 +38,8 @@ const Courses = () => {
             const response = await CourseService.getAllCourses({
                 page: 1,
                 limit: 100,
-                search: searchTerm
+                search: searchTerm,
+                published: "true"
             });
             setCourses(response.data.courses);
         } catch (error) {

@@ -343,7 +343,7 @@ const ExerciseQuestion = ({ question, selectedAnswers, setSelectedAnswers, isSub
             <CardBody pt={0}>
                 <RadioGroup value={getSelectedOptionIndex()} onChange={handleAnswerChange}>
                     <Stack spacing={3}>
-                        {question.options.map((option, index) => (
+                        {question.options?.map((option, index) => (
                             <Radio 
                                 key={index} 
                                 value={index.toString()}

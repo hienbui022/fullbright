@@ -17,7 +17,7 @@ import Courses from './pages/Courses';
 import MyCourses from './pages/MyCourses';
 import Profile from './pages/Profile';
 import LearnPage from './pages/Learn/LearnPage';
-import Dictionary from './pages/Dictionary';
+// import Dictionary from './pages/Dictionary';
 
 import { AuthProvider } from './context/AuthContext';
 import ChangePassword from './pages/ChangePassword';
@@ -41,7 +41,7 @@ function App() {
                         } />
                         <Route path="/register" element={<Register />} />
                         <Route path="/contact" element={<Contact />} />
-                        <Route path="/dictionary" element={<Dictionary />} />
+                        {/* <Route path="/dictionary" element={<Dictionary />} /> */}
                         <Route path="/change-password" element={
                             <PrivateRoute>
                                 <ChangePassword />

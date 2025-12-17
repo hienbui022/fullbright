@@ -519,7 +519,7 @@ const CourseDetail = () => {
                                     <Heading size="md">Course Content</Heading>
                                     {course?.lessons?.length > 0 ? (
                                         <VStack align="stretch">
-                                            {course.lessons.map((lesson, index) => (
+                                            {course.lessons.filter(lesson => lesson.isPublished).map((lesson, index) => (
                                                 <Box 
                                                     key={lesson.id}
                                                     p={4}
